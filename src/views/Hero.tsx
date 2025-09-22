@@ -1,5 +1,8 @@
 import './Hero.scss'
 
+import Maxence from '../assets/maxence.png';
+import Title from '../assets/maxence-title.svg';
+
 function Hero() {
 
   return (
@@ -17,7 +20,7 @@ function Hero() {
           <h1 className="hero__title">
             <span className="sr-only">Maxence Jeudy</span>
             <img
-              src="../src/assets/maxence-title.svg"
+              src={Title}
               alt="Maxence"
               className="hero__title-svg"
               aria-hidden="true"
@@ -39,7 +42,7 @@ function Hero() {
           </div>
         </div>
         <div className="hero__image">
-          <img src="/src/assets/maxence.png" alt="Photo de Maxence Jeudy, le coach sportif" />
+          <img src={Maxence} alt="Photo de Maxence Jeudy, le coach sportif" />
         </div>
       </div>
     </div>
