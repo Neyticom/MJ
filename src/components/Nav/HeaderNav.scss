@@ -1,0 +1,60 @@
+.header-nav {
+  display: none;
+}
+
+.header-nav__list {
+  display: flex; //
+  order: 1; //
+  gap: 25px;
+}
+
+.header-nav__item {
+  text-transform: uppercase; //
+  font-weight: 300; //
+  font-size: 0.8em;
+}
+
+// Moyens / Grands smartphones
+@media (min-width: 480px) {
+  .header-nav__list {
+    gap: 35px;
+  }
+
+  .header-nav__item {
+    font-size: 0.85em;
+    letter-spacing: 0.2px;
+  }
+}
+
+// Tablettes
+@media (min-width: 768px) {
+  .header-nav__list {
+    order: 0;
+  }
+
+  .header-nav__item {
+    font-size: 0.9em;
+  }
+}
+
+// Laptops
+@media (min-width: 1024px) {
+  .header-nav__list {
+    gap: 45px;
+  }
+
+  .header-nav__item {
+    font-size: 1em;
+  }
+}
+
+// Grands écrans
+@media (min-width: 1440px) {
+  .header-nav__list {
+    gap: 55px;
+  }
+
+  .header-nav__item {
+    font-size: 1.1em;
+  }
+}

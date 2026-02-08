@@ -1,0 +1,114 @@
+.side-nav {
+  position: fixed;
+  right: -6.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 0.6em 0.45em 0.6em 1em; // Top Right Bottom Left
+  border: 1px solid #0000002c;
+  border-radius: 1.2em 0 0 1.2em;
+  box-shadow: -1px 0 10px #00000018;
+  transition: ease 300ms;
+  font-size: 1em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.side-nav--open {
+  right: 0;
+  padding: 1.1em 0.55em 1.1em 1.55em; // Top Right Bottom Left
+
+  & .side-nav__list {
+    gap: 0.5em;
+  }
+}
+
+.side-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.side-nav__item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  &:hover {
+    color: #8800ff;
+    &::before {
+      background-color: #8800ff;
+    }
+  }
+  &::before {
+    content: '';
+    width: 0.25em;
+    height: 0.25em;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 0.75em;
+  }
+}
+
+.side-nav__item--current {
+  color: #8800ff;
+  font-weight: 600;
+  transform: translateX(-0.2em);
+  &::before {
+    background-color: #8800ff;
+    width: 0.45em;
+    height: 0.45em;
+    transform: translateX(0.1em);
+  }
+}
+
+.side-nav__link {
+  font-size: 0.75em;
+}
+
+// Moyens / Grands smartphones
+@media (min-width: 480px) {
+  .side-nav {
+  }
+
+  .side-nav__list {
+  }
+
+  .side-nav__item {
+  }
+}
+
+// Tablettes
+@media (min-width: 768px) {
+  .side-nav {
+  }
+
+  .side-nav__list {
+  }
+
+  .side-nav__item {
+  }
+}
+
+// Laptops
+@media (min-width: 1024px) {
+  .side-nav {
+  }
+
+  .side-nav__list {
+  }
+
+  .side-nav__item {
+  }
+}
+
+// Grands écrans
+@media (min-width: 1440px) {
+  .side-nav {
+  }
+
+  .side-nav__list {
+  }
+
+  .side-nav__item {
+  }
+}

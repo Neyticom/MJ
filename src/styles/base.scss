@@ -1,0 +1,9 @@
+@use './variables' as var;
+
+html {
+  user-select: none;
+}
+
+body {
+  font-family: var.$font-primary;
+}

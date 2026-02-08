@@ -1,52 +1,34 @@
-import './Hero.scss'
+import './Hero.scss';
 
-import Maxence from '../assets/maxence.png';
-import Title from '../assets/maxence-title.svg';
+import heroTitle from '../assets/maxence-title.svg';
+import photoMaxence from '../assets/maxence.png';
 
-function Hero() {
-
+const Hero = () => {
   return (
-    <div className="hero">
-      <header className='header'>
-        <ul className='header_list'>
-          <li className='header_item'>Qui suis-je ?</li>
-          <li className='header_item'>Mes offres</li>
-          <li className='header_item'>Ma vision du sport</li>
-        </ul>
-        <button className='header_button'>Espace Client</button>
-      </header>
+    <section className="hero">
       <div className="hero__content">
-        <div className="hero__info">
-          <h1 className="hero__title">
-            <span className="sr-only">Maxence Jeudy</span>
-            <img
-              src={Title}
-              alt="Maxence"
-              className="hero__title-svg"
-              aria-hidden="true"
-            />
-            <br />
-            <span className="hero__title--solid">Jeudy</span>
-          </h1>
-          <p className="hero__subtitle">
-            Un coach sportif<br />
-            à l'écoute de vos besoins
-          </p>
-          <div className="hero__actions">
-            <button className="hero__action-btn hero__action-btn--outline">
-              Offres de coaching
-            </button>
-            <button className="hero__action-btn hero__action-btn--solid">
-              Prendre rendez-vous
-            </button>
-          </div>
-        </div>
-        <div className="hero__image">
-          <img src={Maxence} alt="Photo de Maxence Jeudy, le coach sportif" />
+        <h1 className="hero__title">
+          <img src={heroTitle} className="hero__title-firstname" />
+          <span className="hero__title-lastname">Jeudy</span>
+        </h1>
+        <p className="hero__subtitle">
+          <span>Un coach sportif</span>
+          <span>à l'écoute de vos besoins</span>
+        </p>
+        <div className="hero__actions">
+          <button type="button" className="hero__action-btn hero__action-btn--primary">
+            Offres de coaching
+          </button>
+          <button className="hero__action-btn hero__action-btn--secondary">
+            Prendre rendez-vous
+          </button>
         </div>
       </div>
-    </div>
-  )
-}
+      <div className="hero__image">
+        <img src={photoMaxence} alt="Photo de Maxence Jeudy, le coach sportif" />
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;

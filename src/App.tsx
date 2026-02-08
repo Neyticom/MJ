@@ -1,14 +1,21 @@
+import Header from './layouts/Header';
+import SideNav from './components/Nav/SideNav';
 import Hero from './views/Hero';
 
-import './App.scss'
+import './App.scss';
 
-function App() {
-
+const App = () => {
   return (
     <div className="app">
-      <Hero />
+      <Header />
+      <main>
+        <SideNav />
+        <Hero />
+        {/* Autres sections */}
+      </main>
+      {/* Footer */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
