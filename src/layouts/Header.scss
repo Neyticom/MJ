@@ -3,15 +3,15 @@
   justify-content: center;
   color: #ffffff;
   background-color: #8800ff;
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .header__client-button {
-  font-size: 12px;
+  font-size: 0.76rem;
   font-weight: 300;
   text-transform: uppercase;
   background-color: #6701be;
-  padding: 12px 30px;
+  padding: 0.86rem 2.2rem;
   border: 1px solid #ffffff;
   border-radius: 8px;
   cursor: pointer;
@@ -19,7 +19,7 @@
   // padding: 13px 35px; Grands écrans ?
 }
 
-// Moyens / Grands smartphones
+// Grands smartphones
 @media (min-width: 480px) {
   .header {
     gap: 25px;
