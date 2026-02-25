@@ -3,7 +3,6 @@
   color: #ffffff;
   text-transform: uppercase;
   background-color: #8800ff;
-  padding-block: 7rem 4.75rem;
   padding-block: 8rem 3rem;
   overflow: hidden;
 
@@ -74,9 +73,9 @@
   line-height: 1.2;
   font-size: 1rem;
   font-weight: 300;
+  padding-right: 0.76rem;
   z-index: 3;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-  padding-right: 0.76rem;
 
   // font-size: 32px;
   // font-weight: 200;
@@ -128,9 +127,9 @@
 
   & img {
     position: relative;
-    margin-inline: auto;
     height: 550px;
     width: auto;
+    margin-inline: auto;
   }
 
   // img {
@@ -153,53 +152,73 @@
 // Moyens / Grands smartphones
 @media (min-width: 480px) {
   .hero {
-    max-height: 730px;
+    position: relative; // Déjà set dans le css global
+    padding-block: 9.2rem 4rem;
+    overflow: hidden; //
   }
 
   .hero__content {
-    padding-bottom: 1em;
+    display: flex; //
+    flex-direction: column; //
+    justify-content: flex-end; //
   }
 
-  .hero__info {
-    margin-bottom: 110px;
+  .hero__titles {
+    display: flex; //
+    flex-direction: column; //
+    gap: 0.8rem; //
+    padding-left: 4.5rem;
+    padding-bottom: 2.4rem;
+    margin-left: 0; //
   }
 
-  .hero__title {
-    font-size: 4.5em;
-    margin-bottom: 0.25em;
+  .hero__title-firstname {
+    position: relative; //
+    margin-bottom: 0.2rem;
+    z-index: 3; //
+    filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 12.5px rgba(0, 0, 0, 0.5));
   }
 
-  .hero__title-svg {
-    height: 90px;
-    margin-bottom: -22px;
-  }
-
-  .hero__title--solid {
-    padding-right: 10px;
+  .hero__title-lastname {
+    position: relative; //
+    z-index: 3; //
+    text-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5);
   }
 
   .hero__subtitle {
-    font-size: 22px;
-    padding-right: 22px;
+    position: relative; //
+    display: inline-flex; //
+    flex-direction: column; //
+    font-size: 1.06rem;
+    font-weight: 300; //
+    padding-right: 0.86rem;
+    z-index: 3; //
+    // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   }
 
   .hero__actions {
-    bottom: auto;
-    margin-top: 70px;
-    gap: 25px;
+    display: flex; //
+    flex-direction: row;
+    gap: 1.2rem; //
+    margin-inline: auto; //
+    z-index: 3; //
   }
 
   .hero__action-btn {
-    font-size: 14px;
-    border-radius: 10px;
-    padding: 13px 32px;
+    font-size: 0.86rem;
+    border-radius: 8px; //
+    padding: 1rem 2rem; //
   }
 
   .hero__image {
-    margin-left: -35px;
-    margin-right: 10px;
-    img {
-      height: 525px;
+    position: absolute; //
+    z-index: 1; //
+    top: 1.6rem;
+
+    & img {
+      height: 600px;
+      padding-right: 4rem;
+      margin-right: 0;
     }
   }
 }
@@ -207,50 +226,50 @@
 // Tablettes
 @media (min-width: 768px) {
   .hero {
-    max-height: 800px;
+    max-height: 50rem;
   }
 
   .hero__content {
-    padding-bottom: 1.5em;
+    padding-bottom: 1.5rem;
   }
 
   .hero__info {
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
   }
 
   .hero__title {
-    font-size: 5.5em;
-    margin-bottom: 0.35em;
+    font-size: 5.5rem;
+    margin-bottom: 0.35rem;
   }
 
   .hero__title-svg {
-    height: 110px;
-    margin-bottom: -30px;
+    height: 6.875rem;
+    margin-bottom: -1.875rem;
   }
 
   .hero__title--solid {
-    padding-right: 14px;
+    padding-right: 0.875rem;
   }
 
   .hero__subtitle {
-    font-size: 26px;
-    padding-right: 34px;
+    font-size: 1.625rem;
+    padding-right: 2.125rem;
   }
 
   .hero__actions {
-    margin-top: 50px;
+    margin-top: 3.125rem;
   }
 
   .hero__action-btn {
-    font-size: 15px;
-    padding: 13px 36px;
+    font-size: 0.9375rem;
+    padding: 0.8125rem 2.25rem;
   }
 
   .hero__image {
-    margin-left: -42px;
-    margin-right: 15px;
+    margin-left: -2.625rem;
+    margin-right: 0.9375rem;
     img {
-      height: 575px;
+      height: 35.9375rem;
     }
   }
 }
@@ -258,34 +277,34 @@
 // Laptops
 @media (min-width: 1024px) {
   .hero {
-    max-height: 950px;
+    max-height: 59.375rem;
   }
 
   .hero__content {
-    margin-top: 3em;
+    margin-top: 3rem;
     height: 100%;
   }
 
   .hero__info {
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
   }
 
   .hero__title {
     font-size: 6.5rem;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.3rem;
   }
 
   .hero__title-svg {
-    height: 135px;
+    height: 8.4375rem;
   }
 
   .hero__title--solid {
-    padding-right: 16px;
+    padding-right: 1rem;
   }
 
   .hero__subtitle {
-    font-size: 30px;
-    margin-bottom: 1.5em;
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero__actions {
@@ -294,29 +313,29 @@
   }
 
   .hero__action-btn {
-    font-size: 17px;
+    font-size: 1.0625rem;
     border-radius: 10px;
-    padding: 14px 38px;
+    padding: 0.875rem 2.375rem;
   }
 
   .hero__image img {
-    margin-left: -14px;
-    height: 675px;
+    margin-left: -0.875rem;
+    height: 42.1875rem;
   }
 }
 
 // Grands écrans
 @media (min-width: 1440px) {
   .hero {
-    max-height: 950px;
+    max-height: 59.375rem;
   }
 
   .hero__content {
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
   }
 
   .hero__info {
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
   }
 
   .hero__title {
@@ -324,26 +343,26 @@
   }
 
   .hero__title-svg {
-    height: 145px;
+    height: 9.0625rem;
   }
 
   .hero__subtitle {
-    font-size: 32px;
-    padding-right: 40px;
+    font-size: 2rem;
+    padding-right: 2.5rem;
   }
 
   .hero__action-btn {
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
 
   .hero__action-btn {
     border-radius: 12px;
-    padding: 15px 40px;
+    padding: 0.9375rem 2.5rem;
   }
 
   .hero__image img {
-    margin-left: -20px;
-    margin-right: 90px;
-    height: 725px;
+    margin-left: -1.25rem;
+    margin-right: 5.625rem;
+    height: 45.3125rem;
   }
 }
