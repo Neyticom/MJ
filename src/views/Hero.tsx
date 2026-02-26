@@ -5,12 +5,19 @@ import photoMaxence from '../assets/maxence.png';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" aria-labelledby="hero-title">
       <div className="hero__content">
         <div className="hero__titles">
-          <h1 className="hero__title">
-            <img src={heroTitle} className="hero__title-firstname" />
-            <span className="hero__title-lastname">Jeudy</span>
+          <h1 id="hero-title" className="hero__title" aria-label="Maxence Jeudy">
+            <img
+              src={heroTitle}
+              className="hero__title-firstname"
+              alt="Maxence"
+              aria-hidden="true"
+            />
+            <span className="hero__title-lastname" aria-hidden="true">
+              Jeudy
+            </span>
           </h1>
           <p className="hero__subtitle">
             <span>Un coach sportif</span>
@@ -18,16 +25,20 @@ const Hero = () => {
           </p>
         </div>
         <div className="hero__actions">
-          <button type="button" className="hero__action-btn hero__action-btn--primary">
+          {/* TODO : REMOVE DISABLED ATTRIBUTES AND ADD ONCLICK HANDLER */}
+
+          <button type="button" className="hero__action-btn hero__action-btn--primary" disabled>
             Offres de coaching
           </button>
-          <button className="hero__action-btn hero__action-btn--secondary">
+          <button type="button" className="hero__action-btn hero__action-btn--secondary" disabled>
             Prendre rendez-vous
           </button>
+
+          {/* TODO END */}
         </div>
       </div>
       <div className="hero__image">
-        <img src={photoMaxence} alt="Photo de Maxence Jeudy, le coach sportif" />
+        <img src={photoMaxence} alt="Photo de Maxence Jeudy, le coach sportif" loading="eager" />
       </div>
     </section>
   );

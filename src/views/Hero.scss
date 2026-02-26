@@ -3,15 +3,8 @@
   color: #ffffff;
   text-transform: uppercase;
   background-color: #8800ff;
-  padding-block: 7rem 4.75rem;
   padding-block: 8rem 3rem;
   overflow: hidden;
-
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // width: 100%;
 }
 
 .hero__content {
@@ -19,17 +12,14 @@
   flex-direction: column;
   justify-content: flex-end;
   text-align: right;
-
-  // padding-bottom: 3em; 1em;
-  // margin-bottom: 110px; 70px;
 }
 
 .hero__titles {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding-bottom: 2rem;
   margin-inline: auto;
+  margin-bottom: 2rem;
 }
 
 .hero__title {
@@ -45,14 +35,11 @@
   );
   z-index: 3;
   filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.25)) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-
-  // margin-bottom: -5px; -12; -30px;
-  // filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 12.5px rgba(0, 0, 0, 0.5));
 }
 
 .hero__title-lastname {
   position: relative;
-  font-family: Bungee Shade;
+  font-family: 'Bungee Shade';
   font-size: clamp(
     2.9rem,
     calc(2.9rem + (7rem - 2.9rem) * (100vw - 320px) / (1440px - 320px)),
@@ -60,11 +47,6 @@
   );
   text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.5);
   z-index: 3;
-
-  // font-size: 2.25em;
-  // padding-right: 16px;
-  // font-size: 7rem;
-  // text-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5);
 }
 
 .hero__subtitle {
@@ -74,37 +56,37 @@
   line-height: 1.2;
   font-size: 1rem;
   font-weight: 300;
+  padding-right: 0.76rem;
   z-index: 3;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-  padding-right: 0.76rem;
-
-  // font-size: 32px;
-  // font-weight: 200;
-  // padding-right: 40px;
-  // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hero__actions {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   margin-inline: auto;
   z-index: 3;
-
-  // gap: 25px;
 }
 
 .hero__action-btn {
   font-size: 0.78rem;
   text-transform: uppercase;
+  text-wrap: balance;
   border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 0.98rem 2.4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
 
-  // font-size: 19px;
-  // border-radius: 10px; 12px;
-  // padding: 15px 40px;
+// TODO : WCAG 2.4.7 FOCUS-VISIBLE AND HOVER COLOR CONTRAST FOR BUTTONS
+// Focus-visible allow users who navigate with tab key to preview navigation with buttons.
+
+.hero__action-btn:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
 }
 
 .hero__action-btn--primary {
@@ -117,89 +99,67 @@
   background: #ffffff;
 }
 
+// TODO END
+
 .hero__image {
   position: absolute;
   width: 100%;
   z-index: 1;
   top: 1rem;
 
-  // margin-left: -50px;
-  // margin-right: 90px;
-
   & img {
     position: relative;
-    margin-inline: auto;
-    height: 550px;
+    height: 34.375rem;
     width: auto;
+    margin-inline: auto;
   }
-
-  // img {
-  //   height: 725px;
-  // }
 }
-
-// Title for screen readers only
-// .sr-only {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   padding: 0;
-//   margin: -1px;
-//   overflow: hidden;
-//   clip: rect(0, 0, 0, 0);
-//   border: 0;
-// }
 
 // Moyens / Grands smartphones
 @media (min-width: 480px) {
   .hero {
-    max-height: 730px;
+    padding-block: 9.2rem 4rem;
   }
 
-  .hero__content {
-    padding-bottom: 1em;
+  .hero__titles {
+    gap: 0.8rem;
+    padding-left: 4.5rem;
+    margin-left: 0;
+    margin-bottom: 6rem;
   }
 
-  .hero__info {
-    margin-bottom: 110px;
+  .hero__title-firstname {
+    margin-bottom: 0.2rem;
+    filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 12.5px rgba(0, 0, 0, 0.5));
   }
 
-  .hero__title {
-    font-size: 4.5em;
-    margin-bottom: 0.25em;
-  }
-
-  .hero__title-svg {
-    height: 90px;
-    margin-bottom: -22px;
-  }
-
-  .hero__title--solid {
-    padding-right: 10px;
+  .hero__title-lastname {
+    text-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5);
   }
 
   .hero__subtitle {
-    font-size: 22px;
-    padding-right: 22px;
+    font-size: 1.22rem;
+    font-weight: 200;
+    padding-right: 0.86rem;
   }
 
   .hero__actions {
-    bottom: auto;
-    margin-top: 70px;
-    gap: 25px;
+    flex-direction: row;
+    gap: 1.2rem;
   }
 
   .hero__action-btn {
-    font-size: 14px;
-    border-radius: 10px;
-    padding: 13px 32px;
+    font-size: 0.86rem;
+    padding: 1rem 2rem;
   }
 
   .hero__image {
-    margin-left: -35px;
-    margin-right: 10px;
-    img {
-      height: 525px;
+    top: 1.6rem;
+
+    & img {
+      height: 37.5rem;
+      padding-right: 4rem;
+      margin-right: 0;
     }
   }
 }
@@ -207,50 +167,54 @@
 // Tablettes
 @media (min-width: 768px) {
   .hero {
-    max-height: 800px;
+    padding-block: 11.1rem 5rem;
   }
 
-  .hero__content {
-    padding-bottom: 1.5em;
+  .hero__titles {
+    gap: 1.3rem;
+    padding-inline: 0
+      clamp(
+        10.7rem,
+        calc(10.7rem + (13.6rem - 10.7rem) * (100vw - 768px) / (1024px - 768px)),
+        13.6rem
+      );
+    margin-inline: auto;
+    margin-bottom: 8rem;
   }
 
-  .hero__info {
-    margin-bottom: 100px;
-  }
-
-  .hero__title {
-    font-size: 5.5em;
-    margin-bottom: 0.35em;
-  }
-
-  .hero__title-svg {
-    height: 110px;
-    margin-bottom: -30px;
-  }
-
-  .hero__title--solid {
-    padding-right: 14px;
+  .hero__title-firstname {
+    margin-bottom: 0.4rem;
+    z-index: 1;
   }
 
   .hero__subtitle {
-    font-size: 26px;
-    padding-right: 34px;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   }
 
   .hero__actions {
-    margin-top: 50px;
+    gap: 1.8rem;
   }
 
   .hero__action-btn {
-    font-size: 15px;
-    padding: 13px 36px;
+    font-size: 0.96rem;
+    border-radius: 10px;
+    padding: 1.1rem 2.4rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   .hero__image {
-    margin-left: -42px;
-    margin-right: 15px;
-    img {
-      height: 575px;
+    top: 3rem;
+
+    & img {
+      height: 40.5rem;
+      padding-inline: clamp(
+          28.2rem,
+          calc(28.2rem + (30.9rem - 28.2rem) * (100vw - 768px) / (1024px - 768px)),
+          30.9rem
+        )
+        0;
+      margin-inline: auto;
     }
   }
 }
@@ -258,92 +222,108 @@
 // Laptops
 @media (min-width: 1024px) {
   .hero {
-    max-height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-block: 0;
   }
 
   .hero__content {
-    margin-top: 3em;
-    height: 100%;
+    align-items: flex-end;
+    margin-right: clamp(
+      -1.1rem,
+      calc(-0.86rem + (-1.1rem - -0.86rem) * (100vw - 1024px) / (1440px - 1024px)),
+      -0.86rem
+    );
+    margin-bottom: 5.2rem;
   }
 
-  .hero__info {
-    margin-bottom: 80px;
+  .hero__titles {
+    align-items: flex-end;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    margin-inline: 0;
   }
 
-  .hero__title {
-    font-size: 6.5rem;
-    margin-bottom: 0.3em;
-  }
-
-  .hero__title-svg {
-    height: 135px;
-  }
-
-  .hero__title--solid {
-    padding-right: 16px;
+  .hero__title-firstname {
+    margin-bottom: 0.6rem;
   }
 
   .hero__subtitle {
-    font-size: 30px;
-    margin-bottom: 1.5em;
+    font-size: 1.6rem;
+    padding-right: clamp(
+      1.2rem,
+      calc(1.2rem + (1.6rem - 1.2rem) * (100vw - 1024px) / (1440px - 1024px)),
+      1.6rem
+    );
   }
 
   .hero__actions {
-    position: relative;
-    bottom: 0;
+    gap: 1.4rem;
+    margin-inline: 0;
+    padding-right: clamp(
+      2.6rem,
+      calc(2.6rem + (3.6rem - 2.6rem) * (100vw - 1024px) / (1440px - 1024px)),
+      3.6rem
+    );
   }
 
   .hero__action-btn {
-    font-size: 17px;
-    border-radius: 10px;
-    padding: 14px 38px;
+    font-size: 1rem;
+    padding: 1.2rem 2.4rem;
   }
 
-  .hero__image img {
-    margin-left: -14px;
-    height: 675px;
+  .hero__image {
+    position: relative;
+    top: auto;
+    width: fit-content;
+    margin-left: clamp(
+      -1.1rem,
+      calc(-0.88rem + (-1.1rem - -0.88rem) * (100vw - 1024px) / (1440px - 1024px)),
+      -0.88rem
+    );
+
+    & img {
+      height: 42rem;
+      padding-inline: 0;
+      margin-inline: 0;
+    }
   }
 }
 
 // Grands écrans
 @media (min-width: 1440px) {
-  .hero {
-    max-height: 950px;
-  }
-
   .hero__content {
-    padding-bottom: 3em;
+    margin-bottom: 4.5rem;
   }
 
-  .hero__info {
-    margin-bottom: 80px;
+  .hero__titles {
+    gap: 1.8rem;
+    margin-bottom: 2.75rem;
   }
 
-  .hero__title {
-    font-size: 7rem;
-  }
-
-  .hero__title-svg {
-    height: 145px;
+  .hero__title-firstname {
+    margin-bottom: 0.75rem;
   }
 
   .hero__subtitle {
-    font-size: 32px;
-    padding-right: 40px;
+    font-size: 1.8rem;
+  }
+
+  .hero__actions {
+    gap: 1.6rem;
   }
 
   .hero__action-btn {
-    font-size: 19px;
-  }
-
-  .hero__action-btn {
+    font-size: 1.1rem;
     border-radius: 12px;
-    padding: 15px 40px;
+    padding: 1.2rem 2.5rem;
   }
 
-  .hero__image img {
-    margin-left: -20px;
-    margin-right: 90px;
-    height: 725px;
+  .hero__image {
+    & img {
+      height: 45rem;
+    }
   }
 }
