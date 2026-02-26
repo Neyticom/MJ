@@ -6,6 +6,21 @@ import App from './App.tsx';
 
 import './index.scss';
 
+const vercelEnv = import.meta.env.VERCEL_ENV;
+const gitBranch = import.meta.env.VERCEL_GIT_COMMIT_REF;
+
+let title = 'Maxence Jeudy | Coach sportif';
+
+if (vercelEnv === 'preview') {
+  if (gitBranch === 'dev') {
+    title = 'Vercel - Dev Preview | Maxence Jeudy';
+  } else {
+    title = 'Vercel - Feature Preview | Maxence Jeudy';
+  }
+}
+
+document.title = title;
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
