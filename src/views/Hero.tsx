@@ -34,7 +34,7 @@ const Hero = () => {
             Prendre rendez-vous
           </button>
 
-          {/**/}
+          {/* TODO END */}
         </div>
       </div>
       <div className="hero__image">
