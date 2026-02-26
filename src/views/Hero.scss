@@ -51,7 +51,7 @@
 
 .hero__title-lastname {
   position: relative;
-  font-family: Bungee Shade;
+  font-family: 'Bungee Shade';
   font-size: clamp(
     2.9rem,
     calc(2.9rem + (7rem - 2.9rem) * (100vw - 320px) / (1440px - 320px)),
@@ -84,6 +84,7 @@
 }
 
 .hero__actions {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -96,7 +97,7 @@
 .hero__action-btn {
   font-size: 0.78rem;
   text-transform: uppercase;
-  text-wrap: nowrap;
+  text-wrap: balance;
   border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 0.98rem 2.4rem;
@@ -108,6 +109,14 @@
   // padding: 15px 40px;
 }
 
+// TODO : WCAG 2.4.7 FOCUS-VISIBLE AND HOVER COLOR CONTRAST FOR BUTTONS
+// Focus-visible allow users who navigate with tab key to preview navigation with buttons.
+
+.hero__action-btn:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
 .hero__action-btn--primary {
   font-weight: 300;
   background: #6701be;
@@ -117,6 +126,8 @@
   color: #6701be;
   background: #ffffff;
 }
+
+//
 
 .hero__image {
   position: absolute;
