@@ -11,7 +11,9 @@ const gitBranch = import.meta.env.VERCEL_GIT_COMMIT_REF;
 
 let title = 'Maxence Jeudy | Coach sportif';
 
-if (vercelEnv === 'preview') {
+if (!vercelEnv) {
+  title = 'Local - Maxence | Coach sportif';
+} else if (vercelEnv === 'preview') {
   if (gitBranch === 'dev') {
     title = 'Vercel - Dev Preview | Maxence Jeudy';
   } else {
