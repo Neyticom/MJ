@@ -1,5 +1,5 @@
-// import Header from './layouts/Header';
-// import SideNav from './components/Nav/SideNav';
+import Header from './layouts/Header';
+import SideNav from './components/Nav/SideNav';
 import Hero from './views/Hero';
 
 import './App.scss';
@@ -7,9 +7,9 @@ import './App.scss';
 const App = () => {
   return (
     <div className="app">
-      {/* <Header /> */}
+      <Header />
       <main>
-        {/* <SideNav /> */}
+        <SideNav />
         <Hero />
         {/* Autres sections */}
       </main>

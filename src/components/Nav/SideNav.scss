@@ -80,35 +80,6 @@
 // Tablettes
 @media (min-width: 768px) {
   .side-nav {
-  }
-
-  .side-nav__list {
-  }
-
-  .side-nav__item {
-  }
-}
-
-// Laptops
-@media (min-width: 1024px) {
-  .side-nav {
-  }
-
-  .side-nav__list {
-  }
-
-  .side-nav__item {
-  }
-}
-
-// Grands écrans
-@media (min-width: 1440px) {
-  .side-nav {
-  }
-
-  .side-nav__list {
-  }
-
-  .side-nav__item {
+    display: none;
   }
 }

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <HeaderNav />
-      <button type="button" className="header__client-button">
+      <button type="button" className="header__client-button" disabled>
         Espace Client
       </button>
     </header>
